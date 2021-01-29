@@ -7,7 +7,11 @@ import http.cookies as Cookie
 import cgi
 print("Content-Type: text/html\n")
 # Q1
-#print(os.environ)
+# -------------------------------------------
+# print('Content-Type: application/json')
+# print()
+# print(json.dumps(dict(os.environ), indent=2))
+# -----------------------------------------
 
 # Q2
 # -----------------------------------------
@@ -31,7 +35,6 @@ print("Content-Type: text/html\n")
 # from Bharel on stackoverflow https://stackoverflow.com/users/1658617/bharel
 # https://stackoverflow.com/questions/36508304/how-do-i-properly-get-formdata-using-pythons-cgi-module
 # -----------------------------------------
-#print(templates.login_page())
 form = cgi.FieldStorage()
 username = form.getvalue("username")
 password = form.getvalue("password")
